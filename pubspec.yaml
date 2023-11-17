@@ -1,0 +1,205 @@
+name: rakibhasan
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  custom_signin_buttons: ^1.0.2
+  url_launcher: ^6.1.14
+  carousel_slider: ^4.2.1
+  http: ^0.13.3
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/front_page.jpg
+    - images/rakib.png
+    - images/calculator.png
+    - images/fast-food.png
+    - images/options.png
+    - images/project.png
+    - images/voice-assistant.png
+    - images/blood-bag.png
+    - images/drone.png
+    - images/ebook.png
+    - images/fire.png
+    - images/hospital.png
+    - images/voice_assistant_functionalaity.png
+    - images/uraow.png
+    - images/library.png
+    - images/student_management.png
+    - images/college.png
+    - images/data.png
+    - images/school.png
+    - images/university.png
+    - images/camera.png
+    - images/collegedays1.jpg
+    - images/collegedays2.jpg
+    - images/collegedays3.jpg
+    - images/collegedays4.jpg
+    - images/collegedays5.jpg
+    - images/varsity1.jpg
+    - images/varsity2.jpg
+    - images/varsity3.jpg
+    - images/varsity4.jpg
+    - images/varsity5.jpg
+    - images/varsity6.jpg
+    - images/varsity7.jpg
+    - images/achivement1.png
+    - images/achivement2.png
+    - images/achivement3.png
+    - images/achivement4.png
+    - images/achivement5.png
+    - images/achivement6.png
+    - images/achivement7.png
+    - images/achivement8.png
+    - images/achivement9.png
+    - images/achivement10.png
+    - images/achivement11.png
+    - images/achivement12.png
+    - images/photography1.png
+    - images/photography2.png
+    - images/photography3.png
+    - images/photography4.png
+    - images/photography5.png
+    - images/photography6.png
+    - images/photography7.png
+    - images/photography8.png
+    - images/photography9.png
+    - images/photography10.png
+    - images/photography11.png
+    - images/photography11.png
+    - images/photography12.png
+    - images/photography13.png
+    - images/photography14.png
+    - images/photography15.png
+    - images/photography16.png
+    - images/photography17.png
+    - images/photography18.png
+    - images/photography19.png
+    - images/photography20.png
+    - images/photography21.png
+    - images/photography22.png
+    - images/photography23.png
+    - images/photography24.png
+    - images/photography25.png
+    - images/photography26.png
+    - images/photography27.png
+    - images/photography28.png
+    - images/photography29.png
+    - images/photography30.png
+    - images/photography31.png
+    - images/photography32.png
+    - images/photography33.png
+    - images/photography34.png
+    - images/oop.png
+    - images/operating-system.png
+    - images/compiler.png
+    - images/algorithm.png
+    - images/appdevelopment.png
+    - images/assembler.png
+    - images/c_language.png
+    - images/machine-learning.png
+    - images/rakib_cover.jpg
+    - images/rakib1.jpg
+    - images/rakib2.jpg
+    - images/rakib3.jpg
+    - images/rakib4.jpg
+    - images/rakib5.jpg
+    - images/rakib6.jpg
+    - images/rakib7.jpg
+    - images/rakib8.jpg
+    - images/rakib9.jpg
+    - images/rakib10.jpg
+    - images/rakib11.jpg
+    - images/scientific-calculator.png
+    - images/tic-tac-toe.png
+    - images/cloudy.png
+    - images/hot.png
+    - images/warm.png
+    - images/mild.png
+    - images/cool.png
+    - images/cold.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Aclonica
+      fonts:
+        - asset: fonts/Aclonica-Regular.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+
+
+    - family: Almendra
+      fonts:
+        - asset: fonts/Almendra-Regular.ttf
+
+
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
