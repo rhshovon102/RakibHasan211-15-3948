@@ -6,14 +6,14 @@ import 'package:rakibhasan/m_quiz_app_question_answer_conditions.dart';
 import 'package:rakibhasan/m_quiz_app_calculator.dart';
 import 'dart:async';
 
-class q1 extends StatefulWidget {
-  const q1({Key? key});
+class screen_design extends StatefulWidget {
+  const screen_design({Key? key});
 
   @override
-  State<q1> createState() => _q1State();
+  State<screen_design> createState() => _screen_designState();
 }
 
-class _q1State extends State<q1> {
+class _screen_designState extends State<screen_design> {
   int? selectedAnswerIndex;
   int questionIndex = 0;
   int timeLeft = 60; // Initialize the timer with 60 seconds
@@ -41,7 +41,7 @@ class _q1State extends State<q1> {
   void picAnswer(int value) {
     setState(() {
       selectedAnswerIndex = value;
-      final question = questions[questionIndex];
+      final question = getQuestionList('$question_type')[questionIndex];
 
       if (selectedAnswerIndex == question.correctAnswerIndex) {
         count++;
@@ -51,7 +51,7 @@ class _q1State extends State<q1> {
 
   void goToNextQuestion() {
     setState(() {
-      if (questionIndex < questions.length - 1) {
+      if (questionIndex < getQuestionList('$question_type').length - 1) {
         questionIndex++; // Move to the next question
         timeLeft = 60; // Reset the timer to 60 seconds
         selectedAnswerIndex = null; // Clear the selected answer
@@ -68,8 +68,8 @@ class _q1State extends State<q1> {
 
   @override
   Widget build(BuildContext context) {
-    final question = questions[questionIndex];
-    bool isLastQuestion = questionIndex == questions.length - 1;
+    final question = getQuestionList('$question_type')[questionIndex];
+    bool isLastQuestion = questionIndex == getQuestionList('$question_type').length - 1;
 
     return Scaffold(
       backgroundColor: CupertinoColors.systemGrey4,
@@ -143,7 +143,7 @@ class _q1State extends State<q1> {
                   onpressed: selectedAnswerIndex != null ? goToNextQuestion : null,
                   label: 'Next',
                 ),
-                SizedBox(),
+                SizedBox(height: 10,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

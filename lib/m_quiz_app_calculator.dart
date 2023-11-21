@@ -19,6 +19,7 @@ class _calculatorState extends State<calculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CupertinoColors.systemGrey4,
+      appBar: AppBar(title: Center(child: Text("Calculator",style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),backgroundColor: CupertinoColors.systemYellow,),
 
 
       body: SafeArea(

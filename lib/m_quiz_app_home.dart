@@ -1,16 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rakibhasan/m_quiz_app_home_screen_design.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:rakibhasan/m_quiz_app_topic_selection.dart';
 
-
-class m_quiz_app_home extends StatefulWidget {
-  const m_quiz_app_home({super.key});
+class home extends StatefulWidget {
+  const home({super.key});
 
   @override
-  State<m_quiz_app_home> createState() => _m_quiz_app_homeState();
+  State<home> createState() => _homeState();
 }
 
-class _m_quiz_app_homeState extends State<m_quiz_app_home> {
+class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,8 +32,6 @@ class _m_quiz_app_homeState extends State<m_quiz_app_home> {
                 ),
 
 
-
-
                 Row(
                   children: [
                     Expanded(
@@ -45,7 +42,7 @@ class _m_quiz_app_homeState extends State<m_quiz_app_home> {
                             onPressed: (){
                               Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => q1())
+                                  MaterialPageRoute(builder: (context) => topic_selection())
                               );
                             },
                             child: Text("Start Quiz",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)))

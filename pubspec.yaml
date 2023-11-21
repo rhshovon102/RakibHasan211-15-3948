@@ -39,6 +39,7 @@ dependencies:
   url_launcher: ^6.1.14
   carousel_slider: ^4.2.1
   http: ^0.13.3
+  image_picker: ^1.0.4
 
 
 dev_dependencies:
@@ -173,6 +174,7 @@ flutter:
     - images/mild.png
     - images/cool.png
     - images/cold.png
+    - images/idea.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

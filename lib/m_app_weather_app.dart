@@ -52,6 +52,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Center(child: Text("Check Weather",style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),backgroundColor: Colors.orange,),
       backgroundColor: Colors.grey[300],
       body: SingleChildScrollView(
         child: SafeArea(

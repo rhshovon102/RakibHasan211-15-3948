@@ -31,6 +31,8 @@ class _GamePageState extends State<GamePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CupertinoColors.systemGrey4,
+      appBar: AppBar(title: Center(child: Text("TicTacToe",style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),backgroundColor: Colors.blueGrey,),
+
       body: Center(
         child: SafeArea(
           child: Padding(

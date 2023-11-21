@@ -54,7 +54,7 @@ class _more_applicationsState extends State<more_applications> {
                                   onPressed:(){
                                     Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => m_quiz_app_main())
+                                        MaterialPageRoute(builder: (context) => QuizApp())
                                     );
                                   },
                                   child: Text("Quizulator")

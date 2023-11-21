@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:rakibhasan/m_quiz_app_main.dart';
-import 'package:rakibhasan/m_quiz_app_home_screen_design.dart';
-import 'package:rakibhasan/m_quiz_app_answer.dart';
+import 'package:rakibhasan/front_page.dart';
+import 'package:rakibhasan/m_quiz_app_topic_selection.dart';
+import 'package:rakibhasan/m_quiz_app_screen_design.dart';
 
 class end extends StatefulWidget {
   const end({super.key});
@@ -28,7 +29,7 @@ class _endState extends State<end> {
                 Text("Your Score",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
                 Divider(thickness: 5,color: CupertinoColors.systemYellow),
 
-                SizedBox(height: 100),
+                SizedBox(height: 150),
 
 
                 Stack(
@@ -36,11 +37,11 @@ class _endState extends State<end> {
                   children: [
 
                     SizedBox(
-                      height: 250,
-                      width: 250,
+                      height:350,
+                      width: 350,
                       child: CircularProgressIndicator(
 
-                        strokeWidth: 15,
+                        strokeWidth: 25,
                         color: Colors.yellow,
                         backgroundColor: Colors.white,
 
@@ -50,35 +51,14 @@ class _endState extends State<end> {
                     Center(
                       child: Column(
                         children: [
-                          Text("$count/10",style: TextStyle(fontSize: 90,fontWeight: FontWeight.bold)),
-                          Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
-                          Text("High Score: "+"$highscore",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
+                          Text("$count/10",style: TextStyle(fontSize: 150,fontWeight: FontWeight.bold)),
+                          Text("$percentage%",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
+                          Text("High Score: "+"$highscore",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
 
                         ],
                       ),
                     )
 
-                  ],
-                ),
-
-                SizedBox(height: 40),
-
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
-                        ),
-                        onPressed: (){
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => answer())
-                          );
-
-
-                        }, child: Text("Quick Recap",style: TextStyle(fontSize: 30),))
                   ],
                 ),
 
@@ -96,15 +76,44 @@ class _endState extends State<end> {
                             count = 0;
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => q1())
+                                MaterialPageRoute(builder: (context) => screen_design())
                             );
                           },
-                          child: Text("Restart",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold))),
+                          child: Text("Restart",style: TextStyle(fontWeight: FontWeight.bold))),
+                    ),
+                    SizedBox(width: 5),
+                    Expanded(
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
+                          ),
+                          onPressed: (){
+                            count = 0;
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => topic_selection())
+                            );
+                          },
+                          child: Text("Select New Topic",style: TextStyle(fontWeight: FontWeight.bold))),
+                    ),
+                    SizedBox(width: 5),
+                    Expanded(
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
+                          ),
+                          onPressed: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => front_page())
+                            );
+
+
+                          }, child: Text("Back to Home",style: TextStyle(fontWeight: FontWeight.bold),)),
                     )
                   ],
                 ),
-
-                SizedBox(height: 10)
+                SizedBox(height: 10),
 
 
 
