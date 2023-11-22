@@ -21,13 +21,17 @@ class _contact_infoState extends State<contact_info> {
   String phone_no = '01632093102';
   String email = 'rakib15-3948@diu.edu.bd';
   String home_location = 'Moddhopara, Uttar Khan, Uttara, Dhaka-1230';
+  String name = 'Rakib Hasan';
 
+  bool isEditingName = false;
   bool isEditingEducation = false;
   bool isEditingWebsiteLink = false;
   bool isEditingPhoneNo = false;
   bool isEditingEmail = false;
   bool isEditingHomeLocation = false;
 
+
+  TextEditingController _nameController = TextEditingController();
   TextEditingController _educationController = TextEditingController();
   TextEditingController _websiteLinkController = TextEditingController();
   TextEditingController _phoneNoController = TextEditingController();
@@ -101,7 +105,46 @@ class _contact_infoState extends State<contact_info> {
                       ),
 
                       SizedBox(height: 20),
-                      Text("RAKIB HASAN",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,fontFamily: 'Aclonica',color: Colors.black87)),
+
+                      isEditingName
+                          ? TextField(
+                        controller: _nameController,
+                        onSubmitted: (value) {
+                          setState(() {
+                            name = value;
+                            isEditingName = false;
+                          });
+                        },
+                        decoration: InputDecoration(
+                          fillColor: Colors.white,
+                          filled: true,
+                          hintText: 'Edit',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                          ),
+                        ),
+                      )
+                          : Text(
+                        name,
+                        style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,fontFamily: 'Aclonica',color: Colors.black87),
+                        textAlign: TextAlign.justify,
+                      ),
+                      SizedBox(width: 20),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isEditingName = !isEditingName;
+                            if (isEditingName) {
+                              _nameController.text = name;
+                            }
+                          });
+                        },
+                        child: Icon(Icons.edit_location_outlined, size: 30),
+                      ),
+
 
                       SizedBox(height: 2),
                       Divider(thickness: 5,color: Colors.red),
@@ -206,7 +249,7 @@ class _contact_infoState extends State<contact_info> {
                                   setState(() {
                                     isEditingWebsiteLink = !isEditingWebsiteLink;
                                     if (isEditingWebsiteLink) {
-                                      _websiteLinkController.text = education;
+                                      _websiteLinkController.text = website_link;
                                     }
                                   });
                                 },
@@ -269,7 +312,7 @@ class _contact_infoState extends State<contact_info> {
                                   setState(() {
                                     isEditingPhoneNo = !isEditingPhoneNo;
                                     if (isEditingPhoneNo) {
-                                      _phoneNoController.text = education;
+                                      _phoneNoController.text = phone_no;
                                     }
                                   });
                                 },
@@ -332,7 +375,7 @@ class _contact_infoState extends State<contact_info> {
                                   setState(() {
                                     isEditingEmail = !isEditingEmail;
                                     if (isEditingEmail) {
-                                      _emailController.text = education;
+                                      _emailController.text = email;
                                     }
                                   });
                                 },
@@ -388,7 +431,7 @@ class _contact_infoState extends State<contact_info> {
                                   setState(() {
                                     isEditingHomeLocation = !isEditingHomeLocation;
                                     if (isEditingHomeLocation) {
-                                      _homeLocationController.text = education;
+                                      _homeLocationController.text = home_location;
                                     }
                                   });
                                 },

@@ -24,7 +24,7 @@ class _QuizAppState extends State<QuizApp> {
       theme: ThemeData(fontFamily: 'Almendra'),
 
 
-      home: home(),
+      home: enter_name(),
     );
   }
 }

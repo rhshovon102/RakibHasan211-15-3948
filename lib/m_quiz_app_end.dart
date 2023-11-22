@@ -26,7 +26,7 @@ class _endState extends State<end> {
             child: Column(
 
               children: [
-                Text("Your Score",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
+                Text("$name1 Your Score",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
                 Divider(thickness: 5,color: CupertinoColors.systemYellow),
 
                 SizedBox(height: 150),
@@ -52,8 +52,8 @@ class _endState extends State<end> {
                       child: Column(
                         children: [
                           Text("$count/10",style: TextStyle(fontSize: 150,fontWeight: FontWeight.bold)),
-                          Text("$percentage%",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)),
-                          Text("High Score: "+"$highscore",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
+                          Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
+                          Text("High Score: "+"$highscore",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
 
                         ],
                       ),

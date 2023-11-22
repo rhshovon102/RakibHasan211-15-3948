@@ -91,9 +91,9 @@ List<QuestionModel> flutterQuestions = [
 
 List<QuestionModel> compilerDesignQuestions = [
   QuestionModel(
-    question: "What is the primary purpose of a compiler in computer science?",
-    options: ["Code optimization", "Code interpretation", "Code translation", "Code debugging"],
-    correctAnswerIndex: 2, // Code translation
+    question: "Which compiler optimization technique aims to minimize the number of machine instructions?",
+    options: ["Loop unrolling", "Inlining", "Dead code elimination", "Register allocation"],
+    correctAnswerIndex: 0, // Loop unrolling
   ),
   QuestionModel(
     question: "Which phase of a compiler is responsible for breaking the source code into tokens?",
@@ -101,9 +101,19 @@ List<QuestionModel> compilerDesignQuestions = [
     correctAnswerIndex: 1, // Lexical analysis
   ),
   QuestionModel(
+    question: "What is the primary purpose of a compiler in computer science?",
+    options: ["Code optimization", "Code interpretation", "Code translation", "Code debugging"],
+    correctAnswerIndex: 2, // Code translation
+  ),
+  QuestionModel(
+    question: "What is the primary output of the code generation phase in a compiler?",
+    options: ["Assembly code", "Source code", "Intermediate code", "Machine code"],
+    correctAnswerIndex: 3, // Machine code
+  ),
+  QuestionModel(
     question: "What is the role of the symbol table in compiler design?",
-    options: ["Storing source code", "Managing memory allocation", "Storing variable information", "Handling control flow"],
-    correctAnswerIndex: 2, // Storing variable information
+    options: ["Storing variable information", "Storing source code", "Managing memory allocation", "Handling control flow"],
+    correctAnswerIndex: 0, // Storing variable information
   ),
   QuestionModel(
     question: "Which of the following is a popular programming language that uses a Just-In-Time (JIT) compiler?",
@@ -116,24 +126,14 @@ List<QuestionModel> compilerDesignQuestions = [
     correctAnswerIndex: 2, // Checking variable types
   ),
   QuestionModel(
-    question: "Which compiler optimization technique aims to minimize the number of machine instructions?",
-    options: ["Loop unrolling", "Inlining", "Dead code elimination", "Register allocation"],
-    correctAnswerIndex: 0, // Loop unrolling
-  ),
-  QuestionModel(
-    question: "What is the primary output of the code generation phase in a compiler?",
-    options: ["Assembly code", "Source code", "Intermediate code", "Machine code"],
-    correctAnswerIndex: 3, // Machine code
-  ),
-  QuestionModel(
     question: "In compiler design, what is the purpose of the peephole optimization technique?",
     options: ["Register allocation", "Code generation", "Error handling", "Local code improvement"],
     correctAnswerIndex: 3, // Local code improvement
   ),
   QuestionModel(
     question: "Which programming language is often associated with the LLVM compiler infrastructure?",
-    options: ["C++", "Rust", "Go", "Swift"],
-    correctAnswerIndex: 1, // Rust
+    options: [ "Rust", "C++", "Go", "Swift"],
+    correctAnswerIndex: 0, // Rust
   ),
   QuestionModel(
     question: "What is the function of the linker in the compilation process?",
