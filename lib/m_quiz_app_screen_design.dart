@@ -123,14 +123,6 @@ class _screen_designState extends State<screen_design> {
                     ? button(
                   onpressed: () {
                     setState(() {
-                      score = count;
-
-                      if (score > highscore) {
-                        highscore = score;
-                      } else {
-                        highscore = highscore;
-                      }
-
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => end()),

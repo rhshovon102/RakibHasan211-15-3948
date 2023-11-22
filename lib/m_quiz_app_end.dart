@@ -19,107 +19,140 @@ class _endState extends State<end> {
     return Scaffold(
       backgroundColor: CupertinoColors.systemGrey4,
 
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
 
-              children: [
-                Text("$name1 Your Score",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
-                Divider(thickness: 5,color: CupertinoColors.systemYellow),
+                children: [
+                  Text("$name1 Your Score",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
+                  Divider(thickness: 5,color: CupertinoColors.systemYellow),
 
-                SizedBox(height: 150),
+                  SizedBox(height: 100),
 
 
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
 
-                    SizedBox(
-                      height:350,
-                      width: 350,
-                      child: CircularProgressIndicator(
+                      SizedBox(
+                        height:350,
+                        width: 350,
+                        child: CircularProgressIndicator(
 
-                        strokeWidth: 25,
-                        color: Colors.yellow,
-                        backgroundColor: Colors.white,
+                          strokeWidth: 25,
+                          color: Colors.yellow,
+                          backgroundColor: Colors.white,
 
+                        ),
                       ),
-                    ),
 
-                    Center(
-                      child: Column(
-                        children: [
-                          Text("$count/10",style: TextStyle(fontSize: 150,fontWeight: FontWeight.bold)),
-                          Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
-                          Text("High Score: "+"$highscore",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+                      Center(
+                        child: Column(
+                          children: [
+                            Text("$count/10",style: TextStyle(fontSize: 150,fontWeight: FontWeight.bold)),
+                            Text("$percentage%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
+                            Text("High Score: "+"$highscore",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
 
-                        ],
+                          ],
+                        ),
+                      )
+
+                    ],
+                  ),
+
+                  SizedBox(height: 40,),
+                  TextField(
+                      onChanged: (value) {
+                        pass1= value;
+                      },
+                      onSubmitted: (pass1) {
+                        if( name1 == pass1){
+                          setState(() {
+                            score = count;
+
+                            if (score > highscore) {
+                              highscore = score;
+                            } else {
+                              highscore = highscore;
+                            }
+                          });
+                        }
+                      },
+                      decoration: InputDecoration(
+                        labelText: 'Insert the Name you Input Earlier for Authentication\nand Save/Update High Score',
+                        labelStyle: TextStyle(color: Colors.white),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange),
+                        ),
                       ),
-                    )
+                      cursorColor: Colors.orange,
+                      style: TextStyle(color: Colors.white)
+                  ),
 
-                  ],
-                ),
+                  SizedBox(height: 100,),
 
-
-                Expanded(child: SizedBox()),
-
-                Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton(
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
-                          ),
-                          onPressed: (){
-                            count = 0;
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => screen_design())
-                            );
-                          },
-                          child: Text("Restart",style: TextStyle(fontWeight: FontWeight.bold))),
-                    ),
-                    SizedBox(width: 5),
-                    Expanded(
-                      child: ElevatedButton(
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
-                          ),
-                          onPressed: (){
-                            count = 0;
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => topic_selection())
-                            );
-                          },
-                          child: Text("Select New Topic",style: TextStyle(fontWeight: FontWeight.bold))),
-                    ),
-                    SizedBox(width: 5),
-                    Expanded(
-                      child: ElevatedButton(
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
-                          ),
-                          onPressed: (){
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => front_page())
-                            );
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
+                            ),
+                            onPressed: (){
+                              count = 0;
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => screen_design())
+                              );
+                            },
+                            child: Text("Restart",style: TextStyle(fontWeight: FontWeight.bold))),
+                      ),
+                      SizedBox(width: 5),
+                      Expanded(
+                        child: ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
+                            ),
+                            onPressed: (){
+                              count = 0;
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => topic_selection())
+                              );
+                            },
+                            child: Text("Select New Topic",style: TextStyle(fontWeight: FontWeight.bold))),
+                      ),
+                      SizedBox(width: 5),
+                      Expanded(
+                        child: ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemYellow)
+                            ),
+                            onPressed: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => front_page())
+                              );
 
 
-                          }, child: Text("Back to Home",style: TextStyle(fontWeight: FontWeight.bold),)),
-                    )
-                  ],
-                ),
-                SizedBox(height: 10),
+                            }, child: Text("Back to Home",style: TextStyle(fontWeight: FontWeight.bold),)),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
 
 
 
-              ],
+                ],
 
 
+              ),
             ),
           ),
         ),

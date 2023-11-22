@@ -7,7 +7,7 @@ void main(){
 }
 
 int count = 0, score = 0, highscore = 0, index = 0, i = 0;
-String question_type = '', name1 = '';
+String question_type = '', name1 = '' ,pass1 = '';
 
 class QuizApp extends StatefulWidget {
   const QuizApp({super.key});
